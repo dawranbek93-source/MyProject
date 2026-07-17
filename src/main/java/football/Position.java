@@ -1,4 +1,4 @@
-package football;
+package main.java.football;
 
 public enum Position {
 
@@ -6,7 +6,7 @@ public enum Position {
     ПВ,
     ЛВ,
     ЦАП,
-    ЛП,
+    ЛП,               //позиции игроков
     ПП,
     ЦП,
     ОПП,

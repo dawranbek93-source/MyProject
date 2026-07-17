@@ -1,4 +1,4 @@
-package football;
+package main.java.football;
 
 import java.time.LocalDate;
 
@@ -12,7 +12,7 @@ public class Player {
    private int speed;
    private int shooting;
    private int passing;
-   private int dribbling;
+   private int dribbling;            //Поля
    private int defending;
    private int physical;
    private int diving;
@@ -44,7 +44,7 @@ public class Player {
         this.passing = passing;
         this.dribbling = dribbling;
         this.defending = defending;
-        this.physical = physical;
+        this.physical = physical;     // конструкторы
         this.diving = diving;
         this.handling = handling;
         this.kicking = kicking;
@@ -70,7 +70,7 @@ public class Player {
     public int getDribbling() { return dribbling; }
     public int getDefending() { return defending; }
     public int getPhysical() { return physical; }
-    public int getDiving() { return diving; }
+    public int getDiving() { return diving; }                         //геттеры
     public int getHandling() { return handling; }
     public int getKicking() { return kicking; }
     public int getReflexes() { return reflexes; }
@@ -92,8 +92,8 @@ public class Player {
     public void setPassing(int passing) { this.passing = passing; }
     public void setDribbling(int dribbling) { this.dribbling = dribbling; }
     public void setDefending(int defending) { this.defending = defending; }
-    public void setPhysical(int physical) { this.physical = physical; }
-    public void setDiving(int diving) { this.diving = diving; }
+    public void setPhysical(int physical) { this.physical = physical; }                       // Сеттеры
+    public void setDiving(int diving) { this.diving = diving; }         // сеттеры
     public void setHandling(int handling) { this.handling = handling; }
     public void setKicking(int kicking) { this.kicking = kicking; }
     public void setReflexes(int reflexes) { this.reflexes = reflexes; }
@@ -112,7 +112,7 @@ public class Player {
                 ", speed=" + speed +
                 ", shooting=" + shooting +
                 ", passing=" + passing +
-                ", dribbling=" + dribbling +
+                ", dribbling=" + dribbling +        //toString
                 ", defending=" + defending +
                 ", physical=" + physical +
                 ", diving=" + diving +
