@@ -27,13 +27,14 @@ public class Player {
    private String preferredFoot;
    private int height;
    private int weight;
+   private int jerseyNumber;
 
     public Player(int id, String name, Position position,
     int overall, int potential, int speed, int shooting,
     int passing, int dribbling, int defending, int physical,
     int diving, int handling, int kicking, int reflexes,
     int positioning, LocalDate birthDate, String nationality,
-    int value, int teamId, String preferredFoot, int height, int weight) {
+    int value, int teamId, String preferredFoot, int height, int weight, int jerseyNumber) {
         this.id = id;
         this.name = name;
         this.position = position;
@@ -57,6 +58,7 @@ public class Player {
         this.preferredFoot = preferredFoot;
         this.height = height;
         this.weight = weight;
+        this.jerseyNumber = jerseyNumber;
     }
 
     public int getId() { return id; }
@@ -82,7 +84,7 @@ public class Player {
     public String getPreferredFoot() { return preferredFoot; }
     public int getHeight() { return height; }
     public int getWeight() { return weight; }
-
+    public int getJerseyNumber() {return jerseyNumber;}
 
 
     public void setOverall(int overall) { this.overall = overall; }
@@ -100,6 +102,7 @@ public class Player {
     public void setPositioning(int positioning) { this.positioning = positioning; }
     public void setValue(int value) { this.value = value; }
     public void setTeamId(int teamId) { this.teamId = teamId; }
+    public void setJerseyNumber(int jerseyNumber) {this.jerseyNumber = jerseyNumber;}
 
     @Override
     public String toString() {
@@ -127,6 +130,7 @@ public class Player {
                 ", preferredFoot='" + preferredFoot + '\'' +
                 ", height=" + height +
                 ", weight=" + weight +
+                ", jerseyNumber=" + jerseyNumber +
                 '}';
     }
 }

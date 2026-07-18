@@ -21,21 +21,18 @@ public class League {
 
     public void printTable(){
         teams.sort(Comparator.comparingInt(Team::getPoints)
-                .thenComparingInt(Team::getGoalDifference)
+                .thenComparingInt(Team::getGoalDifference)    // таблица лиги сортируем по очкам после по разница голов
                 .reversed());
 
-        System.out.println("№  | Команда            | И  | В  | Н  | П  | ЗГ | ПГ | О");
-        System.out.println("---|--------------------|----|----|----|----|----|----|---");
+        System.out.println("№  | Команда            | И  | В  | Н  | П  | ЗГ | ПГ | РМ | О");
+        System.out.println("---|--------------------|----|----|----|----|----|----|----|---");
 
         for (int i = 0; i <teams.size() ; i++) {
-            Team team = teams.get(i);
-            System.out.printf("%-3d| %-20s| %-3d| %-3d| %-3d| %-3d| %-3d| %-3d| %-3d%n",
+            Team team = teams.get(i);                                                       // таблица
+            System.out.printf("%-3d| %-19s| %-3d| %-3d| %-3d| %-3d| %-3d| %-3d| %-3d| %-3d%n",
              i+ 1, team.getName(), team.getGamesPlayed(), team.getWins(), team.getDraws(),
-             team.getLosses(), team.getGoalsScored(), team.getGoalsConceded(), team.getPoints());
+             team.getLosses(), team.getGoalsScored(), team.getGoalsConceded(),team.getGoalDifference(), team.getPoints());
         }
     }
-
-
-
     public String toString() {return "Лига: " + name + ", команд: " + teams.size();}   //toString
 }
